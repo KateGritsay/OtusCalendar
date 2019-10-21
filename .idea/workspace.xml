@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d0c2251-94ae-4548-806f-e9c34ceb3f93" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/OtusCalendar.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/event.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpc/server/server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/calendarpb/calendar.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/calendarpb/calendar.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/grpc/calendar.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/calendarpb/calendar.proto" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/grpc/calendar.proto" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +29,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grpc/server/server.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-              <folding>
-                <element signature="e#16#71#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/grpc/calendar.pb.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -47,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/event/event.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
               <folding>
                 <element signature="e#15#41#0" expanded="true" />
               </folding>
@@ -103,11 +104,6 @@
             <path>
               <item name="OtusCalendar" type="b2602c69:ProjectViewProjectNode" />
               <item name="OtusCalendar" type="462c0819:PsiDirectoryNode" />
-              <item name="event" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OtusCalendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OtusCalendar" type="462c0819:PsiDirectoryNode" />
               <item name="grpc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -125,7 +121,7 @@
               <item name="OtusCalendar" type="b2602c69:ProjectViewProjectNode" />
               <item name="OtusCalendar" type="462c0819:PsiDirectoryNode" />
               <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="calendarpb" type="462c0819:PsiDirectoryNode" />
+              <item name="grpc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -159,15 +155,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="23" width="1151" height="811" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25338143" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25338143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32962447" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32962447" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962447" />
@@ -193,14 +188,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/calendarpb/calendar.pb.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="467" column="1" lean-forward="true" selection-start-line="467" selection-start-column="1" selection-end-line="467" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/calendarpb/calendar.proto">
+    <entry file="file://$PROJECT_DIR$/pkg/grpc/calendar.proto">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-59">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
@@ -217,10 +205,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/grpc/calendar.pb.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/event/event.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
           <folding>
             <element signature="e#15#41#0" expanded="true" />
           </folding>
@@ -229,11 +224,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grpc/server/server.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="e#16#71#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="49" />
         </state>
       </provider>
     </entry>

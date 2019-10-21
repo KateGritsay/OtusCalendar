@@ -4,6 +4,8 @@ import (
 	"context"
 	"github.com/golang/protobuf/ptypes"
 	"time"
+	"github.com/KateGritsay/OtusCalendar/event"
+	"github.com/KateGritsay/OtusCalendar/pkg/grpc"
 	)
 
 type Server struct {
@@ -33,7 +35,7 @@ func (server *Server) Create(_ context.Context, eventRequest *Event) (*Event, er
 		duration = tmp
 	}
 
-	id := server.storage.Add(event.Event{
+	id := server.calendar.Add(event.Event{
 		Date:        date,
 		Duration:    duration,
 		Description: eventRequest.GetDescription(),
