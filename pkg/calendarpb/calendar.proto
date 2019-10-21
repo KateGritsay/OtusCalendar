@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package calendar;
+
+option go_package = "grpc";
+
+import  "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+
+
+
+service Calendar {
+    rpc CreateEvent (Event) returns (Event);
+    rpc GetEvent (ID) returns (GetEventRes);
+    rpc UpdateEvent (Event) returns (UpdatedRes);
+    rpc RemoveEvent (ID) returns (UpdatedRes);
+}
+
+message Event {
+    uint64 id = 1;
+    google.protobuf.Timestamp date = 2;
+    google.protobuf.Duration duration = 3;
+    string description = 4;
+}
+
+message Events {
+    repeated Event events = 1;
+}
+
+message ID {
+    int64 id = 1;
+}
+
+message Succesfull {
+    bool ok = 1;
+}
+
+message GetEventRes {
+    oneof result {
+        Event event = 1;
+        string error = 2;
+    }
+}
+
+message UpdatedRes {
+    oneof result {
+        bool ok = 1;
+        string error = 2;
+    }
+}
