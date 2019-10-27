@@ -6,9 +6,9 @@ import (
 )
 
 type Event struct {
-	Description string
 	Date        time.Time
 	Duration    time.Duration
+	Description string
 }
 
 type ID uint64
@@ -23,7 +23,7 @@ func NewCalendar() *Calendar {
 	return &Calendar{events: make(map[ID]Event), id: 1}
 }
 
-func (calendar *Calendar) Add(event Event) ID {
+func (calendar *Calendar) CreateEvent(event Event) ID {
 	calendar.mtx.Lock()
 	id := calendar.id
 	calendar.events[id] = event
@@ -32,7 +32,7 @@ func (calendar *Calendar) Add(event Event) ID {
 	return id
 }
 
-func (calendar *Calendar) Update(id ID, event Event) (ok bool) {
+func (calendar *Calendar) UpdateEvent(id ID, event Event) (ok bool) {
 	calendar.mtx.Lock()
 	defer calendar.mtx.Unlock()
 	_, ok = calendar.events[id]
@@ -43,7 +43,7 @@ func (calendar *Calendar) Update(id ID, event Event) (ok bool) {
 	return ok
 }
 
-func (calendar *Calendar) Remove(id ID) (ok bool) {
+func (calendar *Calendar) RemoveEvent(id ID) (ok bool) {
 	calendar.mtx.Lock()
 	_, ok = calendar.events[id]
 	delete(calendar.events, id)
@@ -51,7 +51,7 @@ func (calendar *Calendar) Remove(id ID) (ok bool) {
 	return ok
 }
 
-func (calendar *Calendar) Get(id ID) (event Event, ok bool) {
+func (calendar *Calendar) GetEvent(id ID) (event Event, ok bool) {
 	calendar.mtx.RLock()
 	event, ok = calendar.events[id]
 	calendar.mtx.RUnlock()

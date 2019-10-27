@@ -28,7 +28,7 @@ message Events {
 }
 
 message ID {
-    int64 id = 1;
+    uint64 id = 1;
 }
 
 message Succesfull {
