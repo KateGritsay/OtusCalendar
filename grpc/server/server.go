@@ -86,7 +86,7 @@ func (server *Server) GetEvent(_ context.Context, id *calendarpb.ID) (*calendarp
 	duration := ptypes.DurationProto(event.Duration)
 
 	return &calendarpb.GetEventRes{Result: &calendarpb.GetEventRes_Event{&calendarpb.Event{
-		Id:          id.Id,
+		Id:          uint64(id.Id),
 		Date:        date,
 		Duration:    duration,
 		Description: event.Description,
